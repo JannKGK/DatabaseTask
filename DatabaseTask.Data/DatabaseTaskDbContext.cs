@@ -9,8 +9,10 @@ namespace DatabaseTask.Data
         public DatabaseTaskDbContext(DbContextOptions<DatabaseTaskDbContext> options)
             : base(options) { }
 
-        // näide, kuidas teha, kui lisate domaini alla ühe objekti
-        // migratsioonid peavad tulema siia libary-sse e TARge20.Data alla.
         public DbSet<Employee> Employee { get; set; }
+        public DbSet<Client> Client { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<EmployeeSale> EmployeeSale { get; set; } 
+        public DbSet<PurchaseHistory> PurchaseHistory { get; set; }
     }
 }
